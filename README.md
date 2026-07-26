@@ -1,5 +1,4 @@
- nix-config-v2
-o'l one but with battery lif optimisations
+ 
 
 
 \# ❄️ NixOS Configuration by Nabil K Sabu
