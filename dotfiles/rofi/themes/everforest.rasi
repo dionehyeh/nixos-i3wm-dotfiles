@@ -1,0 +1,134 @@
+* {
+    bg: #2b3339;
+    bg-alt: #323c41;
+    bg-selected: #3a454a;
+    fg: #d3c6aa;
+    fg-alt: #9da9a0;
+
+    accent: #7fbbb3;
+    green: #a7c080;
+    red: #e67e80;
+    yellow: #dbbc7f;
+
+    background-color: @bg;
+    text-color: @fg;
+    font: "JetBrainsMono Nerd Font 12";
+}
+
+window {
+    width: 45%;
+    height: 55%;
+    border: 2px;
+    border-color: @bg-alt;
+    border-radius: 16px;
+    background-color: @bg;
+    padding: 24px;
+    location: center;
+    anchor: center;
+    transparency: "real";
+}
+
+mainbox {
+    background-color: transparent;
+    spacing: 16px;
+    children: [inputbar, mode-switcher, listview];
+}
+
+inputbar {
+    background-color: @bg-alt;
+    border-radius: 12px;
+    padding: 12px 16px;
+    spacing: 12px;
+    children: [prompt, entry];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @accent;
+    font: "JetBrainsMono Nerd Font 14";
+}
+
+entry {
+    background-color: transparent;
+    text-color: @fg;
+    placeholder: "Search...";
+    placeholder-color: @fg-alt;
+    cursor: text;
+}
+
+mode-switcher {
+    background-color: transparent;
+    spacing: 8px;
+    orientation: horizontal;
+}
+
+button {
+    background-color: @bg-alt;
+    text-color: @fg-alt;
+    border-radius: 8px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+button selected {
+    background-color: @accent;
+    text-color: @bg;
+}
+
+listview {
+    background-color: transparent;
+    spacing: 6px;
+    columns: 1;
+    lines: 10;
+    fixed-height: false;
+    dynamic: true;
+    scrollbar: false;
+}
+
+element {
+    background-color: transparent;
+    padding: 10px 14px;
+    border-radius: 10px;
+    spacing: 14px;
+    cursor: pointer;
+}
+
+element-icon {
+    background-color: transparent;
+    size: 28px;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: @fg;
+    vertical-align: 0.5;
+}
+
+element selected {
+    background-color: @bg-selected;
+}
+
+element selected .element-text {
+    text-color: @fg;
+}
+
+element selected .element-icon {
+    background-color: transparent;
+}
+
+element normal.active,
+element alternate.active {
+    background-color: @green;
+    text-color: @bg;
+}
+
+element selected.active {
+    background-color: @green;
+    text-color: @bg;
+}
+
+element urgent,
+element selected.urgent {
+    background-color: @red;
+    text-color: @bg;
+}
