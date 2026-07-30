@@ -285,15 +285,14 @@ environment.systemPackages = with pkgs; [
   #################
   ## Browsers/App ##
   #################
-
+  
   librewolf
   discord
   onlyoffice-desktopeditors
-
   #################
   ## File Manager ##
   #################
-
+  file-roller
   kdePackages.dolphin
   ntfs3g
 
@@ -395,9 +394,9 @@ environment.systemPackages = with pkgs; [
   #################
   ## Python       ##
   #################
-
+  
+  python313Packages.pip
   python3
-
   basedpyright
   python313Packages.black
   python313Packages.isort
